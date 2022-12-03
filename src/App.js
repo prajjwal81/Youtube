@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Feed from "./Components/Feed";
 import Navbar from "./Components/Navbar";
+import SearchFeed from "./Components/SearchFeed";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Feed />} />
-          <Route path="/search/:searchTerm" exact element={<Feed />} />
+          <Route path="/search/:searchTerm" exact element={<SearchFeed />} />
         </Routes>
       </Box>
     </BrowserRouter>
